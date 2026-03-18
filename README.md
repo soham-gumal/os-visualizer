@@ -80,3 +80,16 @@ Before you begin, ensure you have installed:
 
 4. **View the Application:**
    Open your browser and navigate to http://localhost:5173
+
+---
+
+## 👨‍💻 Developed By
+Soham Gumal, Computer Science & Engineering Student Project Based Learning Submission for SPOS
+
+  <i>"Theory tells you how it should work; this visualizer shows you how it actually works."</i>
+  
+### What's new in this version:
+1. **Syllabus Mapping:** I explicitly added the Unit numbers (III, IV, V, VI) so your professor instantly connects the project to the coursework.
+2. **Folder Structure Map:** Added a beautiful ASCII folder tree so anyone reviewing your code understands your architecture.
+3. **Prerequisites:** Added Node.js requirements.
+4. **Developer Tag:** A spot at the bottom to proudly put your name.
