@@ -3,36 +3,69 @@
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-B73BA5?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
-**OS-Visualizer** is a web-based educational simulation tool designed for the System Programming and Operating System (SPOS) curriculum. It bridges the gap between theoretical OS algorithms and practical execution through real-time, high-fidelity visual simulations.
-
-## ✨ Core Modules Implemented
-
-### 1. CPU Scheduling (Unit III)
-Visualizes how the OS kernel allocates CPU time to different processes.
-* **Supported Algorithms:** FCFS (First-Come, First-Served), SJF (Shortest Job First), Round Robin.
-* **Features:** Live Gantt Chart generation, automatic Wait Time (WT) and Turnaround Time (TAT) calculations.
-
-### 2. Memory Management (Unit V)
-Demonstrates how Physical Memory (RAM) handles page requests and page faults.
-* **Supported Algorithms:** LRU (Least Recently Used), FIFO (First-In, First-Out).
-* **Features:** Interactive Memory Grid, Page Hit/Fault color-coded tracking, Hit Ratio calculations.
-
-### 3. Concurrency Control (Unit IV)
-Simulates resource allocation to prevent system deadlocks.
-* **Supported Algorithms:** Banker's Algorithm.
-* **Features:** Need Matrix auto-calculation, Safe Sequence generation, Safe/Unsafe state detection.
-
-### 4. Disk Scheduling (Unit VI)
-Visualizes how the hard drive head moves to access data cylinders.
-* **Supported Algorithms:** SCAN (Elevator Algorithm).
-* **Features:** Zig-Zag Head Movement Graph, Total Seek Distance calculation.
+**OS-Visualizer** is a modern, web-based educational simulation dashboard designed to demystify the abstract concepts of an Operating System. It provides real-time, interactive graphical visualizations of core OS kernel responsibilities including Process Scheduling, Memory Allocation, Concurrency Control, and Disk Management.
 
 ---
 
-## 🚀 How to Run the Project Locally
+## 🎯 Project Based Learning (PBL) Objective
+This project was developed as a comprehensive submission for the **System Programming and Operating System (SPOS)** curriculum. It bridges the gap between theoretical textbook algorithms and practical execution by integrating multiple syllabus units into a single unified platform.
 
-1. **Clone or Download** the repository to your local machine.
-2. **Open the terminal** and navigate to the project directory:
+**Syllabus Mapping:**
+* **Unit III:** Process Management & CPU Scheduling
+* **Unit IV:** Concurrency Control & Deadlock Avoidance
+* **Unit V:** Memory Management & Page Replacement
+* **Unit VI:** File Management & Disk Scheduling
+
+---
+
+## ✨ Key Features & Modules
+
+### 1. ⏱️ CPU Scheduling Simulator
+Visualizes how the OS kernel allocates CPU time to different processes in the Ready Queue.
+* **Algorithms:** FCFS (First-Come, First-Served), SJF (Shortest Job First), Round Robin (with adjustable Time Quantum).
+* **Visuals:** Auto-generating live Gantt Charts.
+* **Metrics:** Calculates exact Completion Time, Turnaround Time (TAT), and Waiting Time (WT).
+
+### 2. 🧠 Memory Management Lab
+Demonstrates how Physical Memory (RAM) handles page requests and visualizes page faults.
+* **Algorithms:** LRU (Least Recently Used), FIFO (First-In, First-Out).
+* **Visuals:** Interactive Memory Grid showing page frames being loaded and replaced.
+* **Metrics:** Tracks Page Hits, Page Faults, and overall Hit Ratio.
+
+### 3. 🔒 Concurrency & Deadlock Control
+Simulates resource allocation to detect and prevent system deadlocks.
+* **Algorithm:** Banker's Algorithm.
+* **Visuals:** Auto-calculates the NEED Matrix from Allocation and Max limits.
+* **Metrics:** Generates the Safe Execution Sequence and alerts on Unsafe States (Deadlock).
+
+### 4. 💽 Disk Scheduling Simulator
+Visualizes the mechanical movement of a Hard Drive's read/write head across data cylinders.
+* **Algorithm:** SCAN (Elevator Algorithm).
+* **Visuals:** Dynamic Zig-Zag Head Movement Graph (SVG-based).
+* **Metrics:** Calculates Total Seek Distance and exact execution path.
+
+---
+
+## 🛠️ Technical Architecture
+
+This application strictly follows the **Container-Presenter** design pattern to separate complex OS mathematical logic from the React UI:
+* **`/algorithms`**: Pure JavaScript math functions. These act as the "Brain" of the OS, taking raw inputs and returning calculated metrics entirely independent of the UI.
+* **`/pages`**: React components that handle state, user inputs, and pass data to the visualizers.
+* **Styling**: Built with Tailwind CSS utilizing a custom Dark Mode theme inspired by professional developer IDEs.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+Before you begin, ensure you have installed:
+* [Node.js](https://nodejs.org/) (v16.0 or higher)
+* npm (Node Package Manager)
+
+### Installation & Execution
+1. **Clone the repository:**
    ```bash
+   git clone [https://github.com/YOUR_USERNAME/os-visualizer.git](https://github.com/YOUR_USERNAME/os-visualizer.git)
    cd os-visualizer
