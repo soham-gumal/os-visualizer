@@ -69,3 +69,14 @@ Before you begin, ensure you have installed:
    ```bash
    git clone [https://github.com/YOUR_USERNAME/os-visualizer.git](https://github.com/YOUR_USERNAME/os-visualizer.git)
    cd os-visualizer
+
+2. **Install the dependencies:**
+   ```bash
+   npm install
+
+3. **Start the local development server:**
+   ```bash
+   npm run dev
+
+4. **View the Application:**
+   Open your browser and navigate to http://localhost:5173
